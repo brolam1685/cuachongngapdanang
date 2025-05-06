@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Chống Ngập Đà Nẵng - Giải Pháp Ngăn Lũ Hiệu Quả</title>
+    <meta name="description" content="Cung cấp giải pháp cửa chống ngập chất lượng cao tại Đà Nẵng. Bảo vệ ngôi nhà bạn khỏi lũ lụt với công nghệ hiện đại.">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #ffcc00;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #0056b3;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e6b800;
+            transform: translateY(-3px);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 4rem 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 0.5rem;
+            color: #0056b3;
+        }
+        
+        .product-info .price {
+            font-weight: bold;
+            color: #e67e22;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card .quote {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card .author {
+            font-weight: bold;
+            color: #0056b3;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 4rem 0;
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta .btn {
+            background-color: #ffcc00;
+            color: #0056b3;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            color: #ffcc00;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #ffcc00;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Cửa Chống Ngập <span>Đà Nẵng</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Tính Năng</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="#testimonials">Khách Hàng</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Giải Pháp Chống Ngập Hiệu Quả Cho Ngôi Nhà Bạn</h1>
+                <p>Bảo vệ ngôi nhà và tài sản của bạn khỏi lũ lụt với hệ thống cửa chống ngập chất lượng cao, được thiết kế riêng cho điều kiện khí hậu Đà Nẵng.</p>
+                <a href="#contact" class="btn">Nhận Tư Vấn Miễn Phí</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tại Sao Chọn Cửa Chống Ngập Của Chúng Tôi?</h2>
+                <p>Công nghệ tiên tiến - Chất lượng vượt trội - Bảo hành dài hạn</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Chống Ngập Hiệu Quả</h3>
+                    <p>Ngăn chặn hoàn toàn nước lũ tràn vào nhà với độ kín khít cao, chịu được áp lực nước lớn.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Dễ Dàng Lắp Đặt</h3>
+                    <p>Thiết kế thông minh, lắp đặt nhanh chóng, không cần phá dỡ công trình hiện có.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Vật Liệu Bền Vững</h3>
+                    <p>Sử dụng vật liệu cao cấp, chống ăn mòn, chịu được mọi điều kiện thời tiết khắc nghiệt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sản Phẩm Cửa Chống Ngập</h2>
+                <p>Các giải pháp đa dạng phù hợp với mọi nhu cầu</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cửa chống ngập cơ bản">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cửa Chống Ngập Cơ Bản</h3>
+                        <span class="price">5.000.000 VNĐ</span>
+                        <p>Giải pháp tiết kiệm cho nhà phố, chống ngập hiệu quả với mực nước dưới 1m.</p>
+                        <a href="#contact" class="btn">Đặt Mua Ngay</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cửa chống ngập cao cấp">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cửa Chống Ngập Cao Cấp</h3>
+                        <span class="price">8.500.000 VNĐ</span>
+                        <p>Chống ngập lên đến 1.5m, tích hợp hệ thống cảnh báo tự động, phù hợp biệt thự ven sông.</p>
+                        <a href="#contact" class="btn">Đặt Mua Ngay</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cửa chống ngập thông minh">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cửa Chống Ngập Thông Minh</h3>
+                        <span class="price">12.000.000 VNĐ</span>
+                        <p>Công nghệ IoT, tự động đóng/mở khi phát hiện nước lũ, kết nối điện thoại thông minh.</p>
+                        <a href="#contact" class="btn">Đặt Mua Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Khách Hàng Nói Về Chúng Tôi</h2>
+                <p>Hàng trăm gia đình tại Đà Nẵng đã tin tưởng sử dụng sản phẩm của chúng tôi</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Sau khi lắp cửa chống ngập, nhà tôi không còn bị ngập mỗi khi mưa lớn. Sản phẩm hoạt động rất hiệu quả, đúng như cam kết."</p>
+                    <p class="author">- Anh Nguyễn Văn A, Sơn Trà</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Đội ngũ kỹ thuật chuyên nghiệp, tư vấn nhiệt tình. Cửa lắp đặt nhanh chóng mà không ảnh hưởng đến kiến trúc ngôi nhà."</p>
+                    <p class="author">- Chị Lê Thị B, Hải Châu</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Đầu tư một lần nhưng bảo vệ được cả tương lai. Mùa mưa năm nay tôi hoàn toàn yên tâm về ngôi nhà của mình."</p>
+                    <p class="author">- Ông Trần Văn C, Liên Chiểu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Sẵn Sàng Bảo Vệ Ngôi Nhà Của Bạn?</h2>
+            <p>Liên hệ ngay với chúng tôi để được tư vấn miễn phí và nhận báo giá tốt nhất. Đội ngũ kỹ thuật sẽ đến khảo sát tận nơi và đề xuất giải pháp phù hợp nhất với ngôi nhà của bạn.</p>
+            <a href="#contact" class="btn">Liên Hệ Ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Cửa Chống Ngập Đà Nẵng</h3>
+                    <p>Giải pháp chống ngập hàng đầu tại Đà Nẵng, mang đến sự an tâm cho mọi gia đình.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên Hệ</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Nguyễn Văn Linh, Đà Nẵng</p>
+                        <p><i class="fas fa-phone"></i> 0905 123 456</p>
+                        <p><i class="fas fa-envelope"></i> info@cuachongngapdanang.com</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Giờ Làm Việc</h3>
+                    <p>Thứ 2 - Thứ 7: 8:00 - 18:00</p>
+                    <p>Chủ Nhật: 8:00 - 12:00</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên Kết</h3>
+                    <ul>
+                        <li><a href="#features">Tính Năng</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="#testimonials">Đánh Giá</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Cửa Chống Ngập Đà Nẵng. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
